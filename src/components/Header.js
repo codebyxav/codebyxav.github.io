@@ -1,8 +1,14 @@
+import { useEffect, useState } from "react";
 
 export default function Header() {
 
-    const hamburg = document.querySelector('.hamburger');
-    const menu = document.querySelector('aside');
+    const [hamburg, setHamburg] = useState([]);
+    const [menu, setMenu] = useState([]);
+
+    useEffect(() => {
+        setHamburg(document.querySelector('.hamburger'));
+        setMenu(document.querySelector('aside'));
+    }, []);
 
     function menuClick() {
         if (hamburg.classList.contains('clicked')) {

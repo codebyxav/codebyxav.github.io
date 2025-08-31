@@ -1,18 +1,50 @@
 import { useEffect, useState } from 'react';
 import portrait from '../../assets/thyrone.jpg';
+import { adobe, office, network, configuration, linux, cli, hardware } from '../../assets/icons'; 
 
 export default function Hero() {
 
   const [skill, setSkill] = useState([]);
+  const [tskills, setTskills] = useState([]);
 
-  useEffect(() => {
-    setSkill(document.querySelector('.skills__toggle > div'));
-  },[]);
+  const devList = [
+    { name: 'Adobe Creative Cloud', icon: null },
+    { name: 'CSS', icon: null },
+    { name: 'JavaScript', icon: null },
+    { name: 'PHP', icon: null },
+    { name: 'Python', icon: null },
+    { name: 'Sass', icon: null },
+    { name: 'Git / Version Control', icon: null },
+    { name: 'ReactJs', icon: null },
+    { name: 'MySQL', icon: null }
+  ];
+
+  const techList = [
+    { name: 'Adobe Creative Cloud', icon: adobe },
+    { name: 'Microsoft Office', icon: office },
+    { name: 'Networking', icon: network },
+    { name: 'OS Configuration', icon: configuration },
+    { name: 'PC Hardware Installation', icon: hardware },
+    { name: 'Linux', icon: linux },
+    { name: 'Command Line Tools / Version Control', icon: cli }
+  ];
+
+
+
   
 
   function skillSwap() {
     skill.classList.toggle('swap');
   }
+
+
+
+
+
+  useEffect(() => {
+    setSkill(document.querySelector('.skills__toggle > div'));
+    setTskills(techList);
+  },[]);
 
 
   return (
@@ -40,6 +72,19 @@ export default function Hero() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div className='skills'>
 
         <div className='skills__toggle'>
@@ -53,6 +98,19 @@ export default function Hero() {
         </div>
 
         <div className='skills__list'>
+
+          <div className='tech'>
+            <ul>
+              { tskills.map((e, index) => {
+                  return (
+                    <li key={index} className='tech__skill'>   <span>{e.icon}</span>    {`${e.name}`}</li>
+                  )
+                })
+              }
+            </ul>
+          </div>
+
+          <div className='dev'></div>
 
         </div>
 
