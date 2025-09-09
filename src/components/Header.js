@@ -4,16 +4,19 @@ export default function Header() {
 
     const [hamburg, setHamburg] = useState([]);
     const [menu, setMenu] = useState([]);
+    const [body, setBody] = useState([]);
 
     useEffect(() => {
         setHamburg(document.querySelector('.hamburger'));
         setMenu(document.querySelector('aside'));
+        setBody(document.querySelector('body'));
     }, []);
 
     function menuClick() {
         if (hamburg.classList.contains('clicked')) {
             hamburg.classList.toggle('twist');
             menu.classList.toggle('visible');
+            body.classList.toggle('no-scroll');
             setTimeout(() => {
                 hamburg.classList.toggle('clicked');
                 menu.classList.toggle('open');
@@ -21,6 +24,7 @@ export default function Header() {
         } else {
             hamburg.classList.toggle('clicked');
             menu.classList.toggle('open');
+            body.classList.toggle('no-scroll');
             setTimeout(() => {
                 hamburg.classList.toggle('twist');
                 menu.classList.toggle('visible');

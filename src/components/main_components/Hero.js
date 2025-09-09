@@ -48,7 +48,7 @@ export default function Hero() {
 
 
   return (
-    <div className="hero">
+    <section className="hero">
 
 
 
@@ -117,6 +117,6 @@ export default function Hero() {
 
       </div>
 
-    </div>
+    </section>
   )
 }
