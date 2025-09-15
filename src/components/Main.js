@@ -2,6 +2,8 @@
 import Hero from "./main_components/Hero";
 import Projects from "./main_components/Projects";
 import Featured from "./main_components/Featured";
+import Offer from "./main_components/Offer";
+import Contact from "./main_components/Contact";
 
 export default function Main() {
   return (
@@ -13,6 +15,10 @@ export default function Main() {
         <Projects />
 
         <Featured />
+
+        <Offer />
+
+        <Contact />
 
       </div>
     </main>

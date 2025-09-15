@@ -8,7 +8,7 @@ export default function Projects() {
 
         <p>Lorem ipsum dolor sit amet.</p>
 
-        <div className="__tiles">
+        <div className="projects_tiles">
 
             <ul>
                 <li><span></span><img src={dark} alt="" /></li>

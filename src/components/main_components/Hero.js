@@ -42,7 +42,7 @@ export default function Hero() {
 
 
   useEffect(() => {
-    setSkill(document.querySelector('.skills__toggle > div'));
+    setSkill(document.querySelector('.skills_toggle > div'));
     setTskills(techList);
   },[]);
 
@@ -87,7 +87,7 @@ export default function Hero() {
 
       <div className='skills'>
 
-        <div className='skills__toggle'>
+        <div className='skills_toggle'>
 
           <div onClick={skillSwap} >
             <span></span>
@@ -97,13 +97,13 @@ export default function Hero() {
 
         </div>
 
-        <div className='skills__list'>
+        <div className='skills_list'>
 
           <div className='tech'>
             <ul>
               { tskills.map((e, index) => {
                   return (
-                    <li key={index} className='tech__skill'>   <span>{e.icon}</span>    {`${e.name}`}</li>
+                    <li key={index} className='tech_skill'>   <span>{e.icon}</span>    {`${e.name}`}</li>
                   )
                 })
               }

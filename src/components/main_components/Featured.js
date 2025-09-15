@@ -1,6 +1,9 @@
+import { useEffect, useState } from 'react';
 import gray from '../../assets/grey.jpg';
 
 export default function Featured() {
+
+    const [feature, setFeature] = useState([]);
 
     const svg_desktop = (
         <svg width="800px" height="800px" viewBox="-0.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlnssketch="http://www.bohemiancoding.com/sketch/ns">
@@ -20,13 +23,23 @@ export default function Featured() {
         </svg>
     );
 
+    const ft_projects = [
+        { title: 'Project #', description: 'Lorem ipsum dolor', icon: svg_desktop, tags: ['Python', 'CSS', 'JavaScript']},
+        { title: 'Project #', description: 'Lorem ipsum dolor', icon: svg_desktop, tags: ['Python', 'JavaScript']},
+        { title: 'Project #', description: 'Lorem ipsum dolor', icon: svg_desktop, tags: ['Python', 'CSS']}
+    ];
+
+    useEffect(() => {
+        setFeature(ft_projects);
+    }, []);
+
 
 
   return (
     <section className='featured'>
 
 
-        <div>
+        <div className='featured_intro'>
             <h2>Featured Projects</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, mollitia!</p>
         </div>
@@ -34,35 +47,26 @@ export default function Featured() {
 
 
 
-        <div>
+        <div className='featured_projects'>
             <ul>
 
-                <li>
-                    <div><img src={gray} alt="" /></div>
-                    <div>
-                        <div><span>{svg_desktop}</span> <h3>Project</h3></div>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <span>Python</span>
-                    </div>
-                </li>
+                { feature.map((x, index) => {
+                    return (
+                        <li key={index} className='ft_project'>
+                            <div className='ft_image'><img src={gray} alt="" /></div>
+                            <div className='ft_info'>
+                                <div><span>{x.icon}</span> <h3>{x.title}</h3></div>
+                                <p>{x.description}</p>
+                                {x.tags.map((i, index) => {
+                                    return (
+                                        <span key={index}>{i}</span>
+                                    )
+                                })}
+                            </div>
+                        </li>
+                    )
+                })}
 
-                <li>
-                    <div><img src={gray} alt="" /></div>
-                    <div>
-                        <div><span>{svg_desktop}</span> <h3>Project</h3></div>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <span>Python</span>
-                    </div>
-                </li>
-
-                <li>
-                    <div><img src={gray} alt="" /></div>
-                    <div>
-                        <div><span>{svg_desktop}</span> <h3>Project</h3></div>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <span>Python</span>
-                    </div>
-                </li>
             </ul>
         </div>
 
