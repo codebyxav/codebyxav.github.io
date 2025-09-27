@@ -1,23 +1,46 @@
+import { useEffect, useState } from 'react';
 import dark from '../../assets/dark.jpg';
 
 export default function Projects() {
+
+  const [proj, setProj] = useState([]);
+
+  const cards = [
+    { title: '', techs: ['', '', ''], icon: '', bgimage: dark},
+    { title: '', techs: ['', '', ''], icon: '', bgimage: dark},
+    { title: '', techs: ['', '', ''], icon: '', bgimage: dark},
+    { title: '', techs: ['', '', ''], icon: '', bgimage: dark},
+    { title: '', techs: ['', '', ''], icon: '', bgimage: dark},
+    { title: '', techs: ['', '', ''], icon: '', bgimage: dark},
+    { title: '', techs: ['', '', ''], icon: '', bgimage: dark},
+    { title: '', techs: ['', '', ''], icon: '', bgimage: dark},
+  ];
+
+  useEffect(() => {
+    setProj(cards);
+  }, []);
+
   return (
     <section className="projects">
 
-        <h2>My Work</h2>
+        <div>
 
-        <p>Lorem ipsum dolor sit amet.</p>
+          <h2>My Work</h2>
+
+          <p>Lorem ipsum dolor sit amet.</p>
+
+        </div>
 
         <div className="projects_tiles">
 
             <ul>
-                <li><span></span><img src={dark} alt="" /></li>
-                <li><span></span><img src={dark} alt="" /></li>
-                <li><span></span><img src={dark} alt="" /></li>
-                <li><span></span><img src={dark} alt="" /></li>
-                <li><span></span><img src={dark} alt="" /></li>
-                <li><span></span><img src={dark} alt="" /></li>
-                <li><span></span><img src={dark} alt="" /></li>
+
+              { proj.map((value, index) => {
+                return (
+                  <li key={index}><span></span><img src={value.bgimage} alt="" /></li>
+                )
+              })}
+
             </ul>
 
         </div>

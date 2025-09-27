@@ -55,15 +55,19 @@ export default function Hero() {
 
       <div className="hero__intro">
 
-        <h2>Portfolio</h2>
+        <div>
+          <h2>Portfolio</h2>
 
-        <div><img src={portrait} alt="Portrait" /></div>
+          <div><img src={portrait} alt="Portrait" /></div>
+        </div>
 
-        <h3>Hi, I'm Lorem</h3>
+        <div>
+          <h3>Hi, I'm Lorem</h3>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae mollitia, laudantium dolor, velit ipsam harum alias unde pariatur tempore aliquam commodi vero optio dolorum eveniet?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae mollitia, laudantium dolor, velit ipsam harum alias unde pariatur tempore aliquam commodi vero optio dolorum eveniet?</p>
 
-        <button>Contact</button>
+          <button>Contact</button>
+        </div>
 
       </div>
 

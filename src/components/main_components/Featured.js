@@ -56,12 +56,14 @@ export default function Featured() {
                             <div className='ft_image'><img src={gray} alt="" /></div>
                             <div className='ft_info'>
                                 <div><span>{x.icon}</span> <h3>{x.title}</h3></div>
-                                <p>{x.description}</p>
-                                {x.tags.map((i, index) => {
-                                    return (
-                                        <span key={index}>{i}</span>
-                                    )
-                                })}
+                                <div>
+                                    <p>{x.description}</p>
+                                    {x.tags.map((i, index) => {
+                                        return (
+                                            <span key={index}>{i}</span>
+                                        )
+                                    })}
+                                </div>
                             </div>
                         </li>
                     )
