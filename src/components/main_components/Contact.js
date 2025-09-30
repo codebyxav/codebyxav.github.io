@@ -3,6 +3,14 @@
 export default function Contact() {
   return (
     <section className="contact">
+
+      <div>
+        <h2>Contact</h2>
+        <p>Have I piqued your interest ?</p>
+        <p>Get In Touch</p>
+      </div>
+
+      <div>
         <p>Have I piqued your interest</p>
         <h2>Get In Touch</h2>
         <form autoComplete="off">
@@ -13,6 +21,8 @@ export default function Contact() {
             <textarea name="message" id="message" placeholder="Message"></textarea>
             <button type="submit">Send</button>
         </form>
+      </div>
+
     </section>
   )
 }

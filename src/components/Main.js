@@ -17,7 +17,11 @@ export default function Main() {
 
         <Featured />
 
+        <hr></hr>
+
         <Offer />
+
+        <hr></hr>
 
         <Contact />
 
