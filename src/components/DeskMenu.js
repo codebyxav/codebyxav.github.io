@@ -19,13 +19,6 @@ export default function DeskMenu() {
         }, 100);
     }
 
-    // hlScroll.addEventListener('mouseover', () => {
-    //     hvMenu.classList.toggle('active');
-    //     setTimeout(() => {
-    //         hvMenu.classList.toggle('show');
-    //     }, 200);
-    // });
-
     useEffect(() => {
         setHvMenu(document.querySelector('.hover_menu'));
         setHlScroll(document.querySelector('.highlight_scroll'));

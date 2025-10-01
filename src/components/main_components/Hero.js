@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import portrait from '../../assets/thyrone.jpg';
 import { adobe, office, network, configuration, linux, cli, hardware } from '../../assets/icons'; 
 
 export default function Hero() {
 
-  const [skill, setSkill] = useState([]);
+  const [dskill, setDSkill] = useState([]);
   const [tskills, setTskills] = useState([]);
+  const [devEl, setDevEl] = useState([]);
+  const [itEl, setItEl] = useState([]);
 
   const devList = [
     { name: 'Adobe Creative Cloud', icon: null },
@@ -30,20 +32,34 @@ export default function Hero() {
   ];
 
 
+  function devskill() {
+    itEl.classList.toggle('skill_show');
+    devEl.classList.toggle('skill_active');
+    setTimeout(() => {
+      itEl.classList.toggle('skill_active');
+      devEl.classList.toggle('skill_show');
+    }, 500);
+  }
 
-  
-
-  function skillSwap() {
-    skill.classList.toggle('swap');
+  function itskill() {
+    devEl.classList.toggle('skill_show');
+    itEl.classList.toggle('skill_active');
+    setTimeout(() => {
+      devEl.classList.toggle('skill_active');
+      itEl.classList.toggle('skill_show');
+    }, 500);
   }
 
 
 
 
-
   useEffect(() => {
-    setSkill(document.querySelector('.skills_toggle > div'));
+
+    setDSkill(devList);
     setTskills(techList);
+
+    setDevEl(document.querySelector('.dev'));
+    setItEl(document.querySelector('.tech'));
   },[]);
 
 
@@ -93,17 +109,19 @@ export default function Hero() {
 
         <div className='skills_toggle'>
 
-          <div onClick={skillSwap} >
-            <span></span>
-            <p>Skills</p>
-            <p>Tools</p>
+          <div>
+
+            <button onClick={itskill}>IT Skills</button>
+
+            <button onClick={devskill}>Dev Skills</button>
+
           </div>
 
         </div>
 
         <div className='skills_list'>
 
-          <div className='tech'>
+          <div className='tech skill_active skill_show'>
             <ul>
               { tskills.map((e, index) => {
                   return (
@@ -114,7 +132,16 @@ export default function Hero() {
             </ul>
           </div>
 
-          <div className='dev'></div>
+          <div className='dev'>
+            <ul>
+              { dskill.map((e, index) => {
+                  return (
+                    <li key={index} className='tech_skill'>   <span>{e.icon}</span>    {`${e.name}`}</li>
+                  )
+                })
+              }
+            </ul>
+          </div>
 
         </div>
 
