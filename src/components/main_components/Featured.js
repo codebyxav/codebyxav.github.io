@@ -36,7 +36,7 @@ export default function Featured() {
 
 
   return (
-    <section className='featured'>
+    <section id='featured'>
 
 
         <div className='featured_intro'>

@@ -17,7 +17,7 @@ export default function Offer() {
 
 
   return (
-    <section className="offer">
+    <section id="offer">
 
       <div className="offer_intro">
         <p>Services</p>

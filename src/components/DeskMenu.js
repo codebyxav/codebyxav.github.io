@@ -37,11 +37,11 @@ export default function DeskMenu() {
         </ul>
 
         <div className="hover_menu" onMouseLeave={msleave}>
-            <p>{`Home (Skills)`}</p>
-            <p>Projects</p>
-            <p>Featured</p>
-            <p>What I Offer</p>
-            <p>Contact</p>
+            <a href="#hero">{`Home (Skills)`}</a>
+            <a href="#projects">Projects</a>
+            <a href="#featured">Featured</a>
+            <a href="#offer">What I Offer</a>
+            <a href="#contact">Contact</a>
         </div>
 
     </div>

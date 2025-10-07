@@ -28,26 +28,46 @@ export default function Hero() {
     { name: 'OS Configuration', icon: configuration },
     { name: 'PC Hardware Installation', icon: hardware },
     { name: 'Linux', icon: linux },
-    { name: 'Command Line Tools / Version Control', icon: cli }
+    { name: 'Command Line Tools', icon: cli }
   ];
 
 
   function devskill() {
-    itEl.classList.toggle('skill_show');
-    devEl.classList.toggle('skill_active');
-    setTimeout(() => {
-      itEl.classList.toggle('skill_active');
-      devEl.classList.toggle('skill_show');
-    }, 500);
+
+    if (devEl.classList.contains('skill_active')) {
+      //
+    } else {
+      itEl.classList.toggle('skill_show');
+      devEl.classList.toggle('skill_active');
+
+      setTimeout(() => {
+        itEl.classList.toggle('skill_active');
+      }, 300);
+
+      setTimeout(() => {
+        devEl.classList.toggle('skill_show');
+      }, 500);
+    }
+
   }
 
   function itskill() {
-    devEl.classList.toggle('skill_show');
-    itEl.classList.toggle('skill_active');
-    setTimeout(() => {
-      devEl.classList.toggle('skill_active');
-      itEl.classList.toggle('skill_show');
-    }, 500);
+
+    if (itEl.classList.contains('skill_active')) {
+      //
+    } else {
+      devEl.classList.toggle('skill_show');
+
+      setTimeout(() => {
+        itEl.classList.toggle('skill_active');
+        devEl.classList.toggle('skill_active');
+      }, 300);
+
+      setTimeout(() => {
+        itEl.classList.toggle('skill_show');
+      }, 500);
+    }
+
   }
 
 
@@ -64,7 +84,7 @@ export default function Hero() {
 
 
   return (
-    <section className="hero">
+    <section id="hero">
 
 
 
@@ -82,7 +102,7 @@ export default function Hero() {
 
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae mollitia, laudantium dolor, velit ipsam harum alias unde pariatur tempore aliquam commodi vero optio dolorum eveniet?</p>
 
-          <button>Contact</button>
+          <button><a href='#contact'>Contact</a></button>
         </div>
 
       </div>

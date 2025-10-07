@@ -33,7 +33,7 @@ export default function Header() {
     }
 
   return (
-    <header>
+    <header id="header">
 
         <div className="home">
             <div className="logo">

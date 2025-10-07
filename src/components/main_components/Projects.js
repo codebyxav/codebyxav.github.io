@@ -6,14 +6,14 @@ export default function Projects() {
   const [proj, setProj] = useState([]);
 
   const cards = [
-    { title: '', techs: ['', '', ''], icon: '', bgimage: dark},
-    { title: '', techs: ['', '', ''], icon: '', bgimage: dark},
-    { title: '', techs: ['', '', ''], icon: '', bgimage: dark},
-    { title: '', techs: ['', '', ''], icon: '', bgimage: dark},
-    { title: '', techs: ['', '', ''], icon: '', bgimage: dark},
-    { title: '', techs: ['', '', ''], icon: '', bgimage: dark},
-    { title: '', techs: ['', '', ''], icon: '', bgimage: dark},
-    { title: '', techs: ['', '', ''], icon: '', bgimage: dark},
+    { title: 'Title', techs: ['', '', ''], icon: '', bgimage: dark},
+    { title: 'Title', techs: ['', '', ''], icon: '', bgimage: dark},
+    { title: 'Title', techs: ['', '', ''], icon: '', bgimage: dark},
+    { title: 'Title', techs: ['', '', ''], icon: '', bgimage: dark},
+    { title: 'Title', techs: ['', '', ''], icon: '', bgimage: dark},
+    { title: 'Title', techs: ['', '', ''], icon: '', bgimage: dark},
+    { title: 'Title', techs: ['', '', ''], icon: '', bgimage: dark},
+    { title: 'Title', techs: ['', '', ''], icon: '', bgimage: dark},
   ];
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <section className="projects">
+    <section id="projects">
 
         <div>
 
@@ -37,7 +37,7 @@ export default function Projects() {
 
               { proj.map((value, index) => {
                 return (
-                  <li key={index}><span></span><img src={value.bgimage} alt="" /></li>
+                  <li key={index} data-after-text={value.title + index} ><span></span><img src={value.bgimage} alt="" /></li>
                 )
               })}
 
