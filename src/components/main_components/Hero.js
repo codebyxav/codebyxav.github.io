@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import portrait from '../../assets/thyrone.jpg';
-import { adobe, office, network, configuration, linux, cli, hardware } from '../../assets/icons'; 
+import { adobe, office, network, configuration, linux, cli, hardware, css3, html5, jscript, php, pthon3, sass, git, reactjs, mysql, actived, security, routing } from '../../assets/icons'; 
 
 export default function Hero() {
 
@@ -10,25 +10,27 @@ export default function Hero() {
   const [itEl, setItEl] = useState([]);
 
   const devList = [
-    { name: 'Adobe Creative Cloud', icon: null },
-    { name: 'CSS', icon: null },
-    { name: 'JavaScript', icon: null },
-    { name: 'PHP', icon: null },
-    { name: 'Python', icon: null },
-    { name: 'Sass', icon: null },
-    { name: 'Git / Version Control', icon: null },
-    { name: 'ReactJs', icon: null },
-    { name: 'MySQL', icon: null }
+    { name: 'Adobe Creative Cloud', icon: adobe },
+    { name: 'HTML', icon: html5 },
+    { name: 'CSS', icon: css3 },
+    { name: 'JavaScript', icon: jscript },
+    { name: 'PHP', icon: php },
+    { name: 'Python', icon: pthon3 },
+    { name: 'Sass', icon: sass },
+    { name: 'Git / Version Control', icon: git },
+    { name: 'ReactJs', icon: reactjs },
+    { name: 'MySQL', icon: mysql }
   ];
 
   const techList = [
-    { name: 'Adobe Creative Cloud', icon: adobe },
-    { name: 'Microsoft Office', icon: office },
+    { name: 'Active Directory', icon: actived },
+    { name: 'Data Security', icon: security },
     { name: 'Networking', icon: network },
     { name: 'OS Configuration', icon: configuration },
     { name: 'PC Hardware Installation', icon: hardware },
     { name: 'Linux', icon: linux },
-    { name: 'Command Line Tools', icon: cli }
+    { name: 'Command Line Tools', icon: cli },
+    { name: 'Routing & Switching', icon: routing }
   ];
 
 
@@ -98,9 +100,9 @@ export default function Hero() {
         </div>
 
         <div>
-          <h3>Hi, I'm Lorem</h3>
+          <h3>Hi, I'm Xavier</h3>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae mollitia, laudantium dolor, velit ipsam harum alias unde pariatur tempore aliquam commodi vero optio dolorum eveniet?</p>
+          <p>Skilled in both web development and IT, I create efficient, user-focused solutions while keeping systems running smoothly. I’m passionate about technology, quick to learn new tools, and always ready to take on fresh challenges.</p>
 
           <button><a href='#contact'>Contact</a></button>
         </div>

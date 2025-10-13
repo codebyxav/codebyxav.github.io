@@ -7,7 +7,7 @@ export default function Contact() {
       <div>
         <h2>Contact</h2>
         <p>Have I piqued your interest ?</p>
-        <p>Get In Touch</p>
+        <p>Let’s connect and create something great.</p>
       </div>
 
       <div>

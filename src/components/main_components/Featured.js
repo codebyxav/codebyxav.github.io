@@ -41,7 +41,7 @@ export default function Featured() {
 
         <div className='featured_intro'>
             <h2>Featured Projects</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, mollitia!</p>
+            <p>A closer look at my top work.</p>
         </div>
 
 

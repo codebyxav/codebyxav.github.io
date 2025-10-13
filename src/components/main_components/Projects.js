@@ -1,19 +1,20 @@
 import { useEffect, useState } from 'react';
-import dark from '../../assets/dark.jpg';
+import { future, working } from '../../assets/icons';
+import dark from '../../assets/darkgray.png';
 
 export default function Projects() {
 
   const [proj, setProj] = useState([]);
 
   const cards = [
-    { title: 'Title', techs: ['', '', ''], icon: '', bgimage: dark},
-    { title: 'Title', techs: ['', '', ''], icon: '', bgimage: dark},
-    { title: 'Title', techs: ['', '', ''], icon: '', bgimage: dark},
-    { title: 'Title', techs: ['', '', ''], icon: '', bgimage: dark},
-    { title: 'Title', techs: ['', '', ''], icon: '', bgimage: dark},
-    { title: 'Title', techs: ['', '', ''], icon: '', bgimage: dark},
-    { title: 'Title', techs: ['', '', ''], icon: '', bgimage: dark},
-    { title: 'Title', techs: ['', '', ''], icon: '', bgimage: dark},
+    { title: '', status: [working, 'Project In Progress'], bgimage: dark},
+    { title: '', status: [future, 'Project Not Started'], bgimage: dark},
+    { title: '', status: [future, 'Project Not Started'], bgimage: dark},
+    { title: '', status: [future, 'Project Not Started'], bgimage: dark},
+    { title: '', status: [future, 'Project Not Started'], bgimage: dark},
+    { title: '', status: [future, 'Project Not Started'], bgimage: dark},
+    { title: '', status: [future, 'Project Not Started'], bgimage: dark},
+    { title: '', status: [future, 'Project Not Started'], bgimage: dark},
   ];
 
   useEffect(() => {
@@ -27,7 +28,7 @@ export default function Projects() {
 
           <h2>My Work</h2>
 
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Showcasing the work that shaped my skills.</p>
 
         </div>
 
@@ -37,7 +38,7 @@ export default function Projects() {
 
               { proj.map((value, index) => {
                 return (
-                  <li key={index} data-after-text={value.title + index} ><span></span><img src={value.bgimage} alt="" /></li>
+                  <li key={index} data-after-text={value.title} ><span></span><img src={value.bgimage} alt="" /><div>{value.status[0]}<p>{value.status[1]}</p></div></li>
                 )
               })}
 

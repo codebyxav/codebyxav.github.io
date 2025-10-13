@@ -22,8 +22,8 @@ export default function Offer() {
       <div className="offer_intro">
         <p>Services</p>
         <p>What I Offer</p>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-        <button>Get In Touch</button>
+        <p>What I can do for your team.</p>
+        <button><a href="#contact">Get In Touch</a></button>
       </div>
 
       <div className="offer_skill">
