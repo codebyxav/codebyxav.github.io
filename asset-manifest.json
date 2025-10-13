@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f103ab40.css",
+    "main.js": "/static/js/main.170603f3.js",
+    "static/media/thyrone.jpg": "/static/media/thyrone.c8095f8c41437d551601.jpg",
+    "static/media/grey.jpg": "/static/media/grey.232c49ba5ea1752befde.jpg",
+    "static/media/Roboto-Bold.woff": "/static/media/Roboto-Bold.6c9355dcf58a47556396.woff",
+    "static/media/Roboto-SemiBold.woff": "/static/media/Roboto-SemiBold.725fc0cc6eb52784952b.woff",
+    "static/media/Roboto-Medium.woff": "/static/media/Roboto-Medium.370efa0052ba292938df.woff",
+    "static/media/Roboto-Light.woff": "/static/media/Roboto-Light.59357ea0f7551d2477d3.woff",
+    "static/media/Roboto-Regular.woff": "/static/media/Roboto-Regular.d40ce83d9c36d8172bff.woff",
+    "static/media/Roboto-Bold.woff2": "/static/media/Roboto-Bold.3a88595d0b70b190a937.woff2",
+    "static/media/Roboto-Medium.woff2": "/static/media/Roboto-Medium.b92d83a403bc4bdc1e14.woff2",
+    "static/media/Roboto-SemiBold.woff2": "/static/media/Roboto-SemiBold.a4c1ba66b42918a0960d.woff2",
+    "static/media/Roboto-Light.woff2": "/static/media/Roboto-Light.7d0ad7612d886ced9d14.woff2",
+    "static/media/Roboto-Regular.woff2": "/static/media/Roboto-Regular.961bb0d4f14adf500700.woff2",
+    "static/media/darkgray.png": "/static/media/darkgray.ac0814d0bac9aa8bc410.png",
+    "index.html": "/index.html",
+    "main.f103ab40.css.map": "/static/css/main.f103ab40.css.map",
+    "main.170603f3.js.map": "/static/js/main.170603f3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f103ab40.css",
+    "static/js/main.170603f3.js"
+  ]
+}
