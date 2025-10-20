@@ -8,6 +8,8 @@ export default function Hero() {
   const [tskills, setTskills] = useState([]);
   const [devEl, setDevEl] = useState([]);
   const [itEl, setItEl] = useState([]);
+  const [devBtn, setDevBtn] = useState([]);
+  const [itBtn, setItBtn] = useState([]);
 
   const devList = [
     { name: 'Adobe Creative Cloud', icon: adobe },
@@ -41,6 +43,8 @@ export default function Hero() {
     } else {
       itEl.classList.toggle('skill_show');
       devEl.classList.toggle('skill_active');
+      itBtn.classList.toggle('hr_active');
+      devBtn.classList.toggle('hr_active');
 
       setTimeout(() => {
         itEl.classList.toggle('skill_active');
@@ -59,6 +63,8 @@ export default function Hero() {
       //
     } else {
       devEl.classList.toggle('skill_show');
+      itBtn.classList.toggle('hr_active');
+      devBtn.classList.toggle('hr_active');
 
       setTimeout(() => {
         itEl.classList.toggle('skill_active');
@@ -82,6 +88,8 @@ export default function Hero() {
 
     setDevEl(document.querySelector('.dev'));
     setItEl(document.querySelector('.tech'));
+    setDevBtn(document.querySelector('.skills_toggle button:first-of-type'));
+    setItBtn(document.querySelector('.skills_toggle button:last-of-type'));
   },[]);
 
 
@@ -133,7 +141,7 @@ export default function Hero() {
 
           <div>
 
-            <button onClick={itskill}>IT Skills</button>
+            <button onClick={itskill} className='hr_active'>IT Skills</button>
 
             <button onClick={devskill}>Dev Skills</button>
 

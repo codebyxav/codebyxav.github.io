@@ -13,7 +13,7 @@ export default function Contact() {
       <div>
         <p>Have I piqued your interest</p>
         <h2>Get In Touch</h2>
-        <form autoComplete="off">
+        <form autoComplete="off" action={'https://formspree.io/f/xovkzvvq'} method="POST">
             <input type="text" name="name" id="name" placeholder="Your Name"/>
             <input type="text" name="company" id="company" placeholder="Company Name"/>
             <input type="email" name="email" id="email" placeholder="E-Mail"/>
