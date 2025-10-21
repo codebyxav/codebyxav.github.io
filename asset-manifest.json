@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c25f46c3.css",
-    "main.js": "/static/js/main.9ee25298.js",
+    "main.js": "/static/js/main.4289a02c.js",
     "static/media/thyrone.jpg": "/static/media/thyrone.c8095f8c41437d551601.jpg",
     "static/media/grey.jpg": "/static/media/grey.232c49ba5ea1752befde.jpg",
     "static/media/Roboto-Bold.woff": "/static/media/Roboto-Bold.6c9355dcf58a47556396.woff",
@@ -17,10 +17,10 @@
     "static/media/darkgray.png": "/static/media/darkgray.ac0814d0bac9aa8bc410.png",
     "index.html": "/index.html",
     "main.c25f46c3.css.map": "/static/css/main.c25f46c3.css.map",
-    "main.9ee25298.js.map": "/static/js/main.9ee25298.js.map"
+    "main.4289a02c.js.map": "/static/js/main.4289a02c.js.map"
   },
   "entrypoints": [
     "static/css/main.c25f46c3.css",
-    "static/js/main.9ee25298.js"
+    "static/js/main.4289a02c.js"
   ]
 }
