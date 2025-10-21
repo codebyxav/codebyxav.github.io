@@ -6,9 +6,9 @@ export default function Offer() {
   const [offdata, setOffdata] = useState([]);
 
   const skills = [
-    { title: 'Information Technology', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium tempore doloribus quos aut voluptatum ullam sit, pariatur consequuntur debitis laboriosam!', points: [ 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.' ]},
-    { title: 'Web Development', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium tempore doloribus quos aut voluptatum ullam sit, pariatur consequuntur debitis laboriosam!', points: [ 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.' ]},
-    { title: 'Soft Skills', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium tempore doloribus quos aut voluptatum ullam sit, pariatur consequuntur debitis laboriosam!', points: [ 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.' ]}
+    { title: 'Information Technology', description: 'Skilled in the core fundamentals of Information Technology, with hands-on experience across essential IT systems, infrastructure, and support operations.', points: [ 'Active Directory', 'Networking', 'OS Installation' ]},
+    { title: 'Web Development', description: 'Experienced in building functional and responsive websites using core web technologies, with a solid understanding of both front-end and back-end development.', points: [ 'HTML, CSS, JavaScript', 'Python', 'PHP' ]},
+    { title: 'Soft Skills', description: 'Strong interpersonal and communication abilities with essential workplace skills that support teamwork, adaptability, and professional growth.', points: [ 'Communication', 'Attention to detail', 'Adaptability' ]}
   ];
 
   useEffect(() => {
