@@ -12,6 +12,7 @@
 
     @include u.breakpoints(xlarge) {
         flex-direction: row;
+        justify-content: space-between;
     }
 
 
