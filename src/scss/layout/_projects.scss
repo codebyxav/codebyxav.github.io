@@ -1,0 +1,142 @@
+@use '../util/' as u;
+
+
+#projects {
+    width: 100%;
+    background-color: #2a2c2c;
+    border-radius: u.rem(10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: u.rem(75);
+    padding: u.rem(25) u.rem(25);
+
+    @include u.breakpoints(xlarge) {
+        margin-top: u.rem(50);
+    }
+
+    & > div {
+
+        &:first-of-type {
+            width: 100%;
+
+            h2 {
+                margin-top: u.rem(15);
+                margin-bottom: u.rem(5);
+                font-size: var(--fs-xl);
+                color: var(--text);
+                text-align: center;
+
+                @include u.breakpoints(xlarge) {
+                    font-size: var(--fs-lg);
+                    text-align: left;
+                }
+            }
+
+            p {
+                margin-bottom: u.rem(35);
+                font-size: var(--fs-base);
+                font-weight: 500;
+                color: var(--text);
+                text-align: center;
+
+                @include u.breakpoints(xlarge) {
+                    font-size: var(--fs-sm);
+                    text-align: left;
+                }
+            }
+
+        }
+    }
+
+
+    
+    .projects_tiles {
+        width: 100%;
+        height: 100%;
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: u.rem(15);
+
+            @include u.breakpoints(xlarge) {
+                justify-content: space-between;
+            }
+
+            li {
+                flex-grow: 1;
+                flex-basis: 100%;
+                position: relative;
+                border-radius: u.rem(10);
+                background-color: var(--secondary);
+                cursor: pointer;
+
+                & > div {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    p {
+                        font-size: var(--fs-md);
+                        margin-top: u.rem(15);
+
+                        @include u.breakpoints(xlarge) {
+                            font-size: var(--fs-base);
+                        }
+                    }
+                }
+
+                @include u.breakpoints(medium) {
+                    flex-basis: 42%;
+                }
+
+                @include u.breakpoints(xlarge) {
+                    flex-basis: 23%;
+                }
+
+                &::after {
+                    content: attr(data-after-text);
+                    font-size: var(--fs-lg);
+                    position: absolute;
+                    top: 0;
+                    display: flex;
+                    background-color: var(--text);
+                    opacity: 0;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    transition: opacity .3s linear;
+                    border-radius: u.rem(10);
+                }
+
+                &:hover {
+                    &::after {
+                        opacity: .5;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: u.rem(10);
+                    background-color: hsl(0, 0%, 9%);
+                    opacity: 0;
+                }
+
+                svg {
+                    width: 20%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

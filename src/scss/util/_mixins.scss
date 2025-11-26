@@ -1,0 +1,33 @@
+@use 'sass:math';
+@use 'sass:map';
+@use './functions' as f;
+
+$breakpoints: (
+    'small': f.rem(576),
+    'medium': f.rem(768),
+    'large': f.rem(992),
+    'xlarge': f.rem(1200),
+    'xxlarge': f.rem(1400)
+);
+
+
+@mixin breakpoints($size) {
+    @media (min-width: map.get($breakpoints, $size)) {
+        @content;
+    }
+}
+
+@mixin all-center {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin start-center {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin end-center {
+    justify-content: flex-end;
+    align-items: center;
+}

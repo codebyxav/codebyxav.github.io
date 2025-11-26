@@ -1,0 +1,157 @@
+@use '../util/' as u;
+
+#offer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: u.rem(50);
+    border-radius: u.rem(10);
+    color: var(--text);
+    padding: u.rem(50) 0;
+
+    @include u.breakpoints(xlarge) {
+        flex-direction: row;
+    }
+
+
+    & > div {
+
+        &.offer_intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include u.breakpoints(xlarge) {
+                align-self: flex-start;
+                align-items: flex-start;
+            }
+
+            p {
+                
+                &:nth-of-type(1) {
+                    font-size: var(--fs-base);
+                    margin-bottom: u.rem(15);
+                }
+
+                &:nth-of-type(2) {
+                    font-size: var(--fs-md);
+                    font-weight: 500;
+                }
+
+                &:nth-of-type(3) {
+                    font-size: var(--fs-base);
+                    margin: u.rem(5) 0;
+
+                    @include u.breakpoints(xlarge) {
+                        font-size: var(--fs-sm);
+                    }
+                }
+
+            }
+
+            button {
+                width: u.rem(160);
+                height: u.rem(50);
+                margin: u.rem(25) 0;
+                letter-spacing: u.rem(2);
+                font-size: var(--fs-base);
+                font-weight: 500;
+                background-color: transparent;
+                border: var(--secondary) u.rem(1) solid;
+                border-radius: u.rem(8);
+                color: var(--secondary);
+                transition: all .1s linear;
+                cursor: pointer;
+                position: relative;
+
+                @include u.breakpoints(xlarge) {
+                    width: u.rem(130);
+                    height: u.rem(35);
+                    font-size: var(--fs-sm);
+                }
+                
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    // padding: u.rem(15) u.rem(40);
+                }
+
+                &:hover {
+                    background-color: var(--secondary);
+                    color: var(--text);
+                }
+            }
+
+        }
+
+        &.offer_skill {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            gap: u.rem(25);
+            margin-top: u.rem(25);
+            background-color: var(--bg-light);
+            border-radius: u.rem(10);
+
+            @include u.breakpoints(xlarge) {
+                flex-direction: row;
+                margin-top: 0;
+            }
+
+            & > div {
+                width: 100%;
+                min-height: u.rem(250);
+                background-color: transparent;
+                border: var(--border) u.rem(1) solid;
+                display: flex;
+                flex-direction: column;
+                padding: u.rem(15);
+                border-radius: u.rem(10);
+
+                p {
+                    &:nth-of-type(1) {
+                        margin-bottom: u.rem(10);
+                    }
+
+                    &:nth-of-type(2) {
+                        margin-bottom: u.rem(5);
+                        font-size: var(--fs-lg);
+                        font-weight: 500;
+
+                        @include u.breakpoints(xlarge) {
+                            font-size: var(--fs-md);
+                        }
+                    }
+
+                    &:nth-of-type(3) {
+                        margin-bottom: u.rem(15);
+
+                        @include u.breakpoints(xlarge) {
+                            font-size: var(--fs-sm);
+                        }
+                    }
+
+                    &:nth-of-type(4) {
+                        margin-bottom: u.rem(10);
+                        font-style: italic;
+                    }
+                }
+            }
+
+            ul {
+                li {
+                    list-style-position: inside;
+
+                    @include u.breakpoints(xlarge) {
+                        font-size: var(--fs-sm);
+                    }
+                }
+            }
+        }
+    }
+}

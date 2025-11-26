@@ -1,0 +1,103 @@
+@use '../util/' as u;
+
+.deskmenu {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 40%;
+    transform: translateY(-40%);
+    width: auto;
+    height: u.rem(100);
+    margin-right: u.rem(25);
+
+    @include u.breakpoints(xlarge) {
+        display: block;
+    }
+
+    & > div {
+        &.active {
+            display: flex;
+        }
+
+        &.show {
+            left: u.rem(-230);
+            opacity: 1;
+        }
+    }
+
+    .highlight_scroll {
+        height: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        cursor: pointer;
+
+        li {
+            height: u.rem(3);
+            background-color: var(--text);
+
+            &:nth-of-type(1) {
+                width: u.rem(20);
+            }
+
+            &:nth-of-type(2) {
+                width: u.rem(15);
+            }
+
+            &:nth-of-type(3) {
+                width: u.rem(10);
+            }
+
+            &:nth-of-type(4) {
+                width: u.rem(15);
+            }
+
+            &:nth-of-type(5) {
+                width: u.rem(20);
+            }
+        }
+    }
+
+
+
+    .hover_menu {
+        display: none;
+        position: absolute;
+        top: u.rem(-10);
+        left: u.rem(-200);
+        width: u.rem(250);
+        padding: u.rem(25);
+        background-color: var(--bg-light);
+        border-radius: u.rem(10);
+        color: var(--text-muted);
+        flex-direction: column;
+        gap: u.rem(5);
+        border: var(--border) u.rem(1) solid;
+        opacity: 0;
+        transition: all .1s linear;
+
+        &.active {
+            display: flex;
+        }
+
+        &.show {
+            left: u.rem(-230);
+            opacity: 1;
+        }
+
+        a {
+            border-radius: u.rem(5);
+            padding: u.rem(5) u.rem(5);
+            cursor: pointer;
+            transition: all .1s linear;
+            text-decoration: none;
+
+            &:hover {
+                background-color: var(--highlight);
+                color: var(--text);
+            }
+        }
+    }
+}

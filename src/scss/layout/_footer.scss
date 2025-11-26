@@ -1,0 +1,72 @@
+@use '../util/' as u;
+
+footer {
+    width: 100%;
+    height: u.rem(150);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: u.rem(50);
+}
+
+.footer_socials {
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: u.rem(15);
+
+        li {
+            width: u.rem(25);
+            height: u.rem(25);
+            position: relative;
+            list-style: none;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+
+
+
+    .email {
+        svg {
+            path {
+                stroke: var(--text);
+            }
+
+            rect {
+                stroke: var(--text);
+            }
+        }
+    }
+
+    .instagram {
+        svg {
+            path {
+                fill: var(--text);
+            }
+        }
+    }
+
+    .linkedin {
+        svg {
+            path {
+                fill: var(--text);
+            }
+        }
+    }
+
+    .github {
+        path {
+            fill: var(--text);
+        }
+    }
+
+
+
+    
+}
+

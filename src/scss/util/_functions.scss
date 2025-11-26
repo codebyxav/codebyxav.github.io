@@ -1,0 +1,17 @@
+@use 'sass:math';
+
+@function rem($num) {
+    @if math.is-unitless($num) {
+        @return math.div($num, 16) + rem;
+    } @else {
+        @error "Please don't use units when you use this function.";
+    }
+}
+
+@function em($num) {
+    @if math.is-unitless($num) {
+        @return math.div($num, 16) + rem;
+    } @else {
+        @error "Please don't use units when you use this function.";
+    }
+}

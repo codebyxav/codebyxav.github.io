@@ -1,0 +1,153 @@
+@use '../util/' as u;
+
+#contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-light);
+    margin-top: u.rem(100);
+    padding: u.rem(20) 0;
+    border-radius: u.rem(10);
+    color: var(--text);
+
+    @include u.breakpoints(xlarge) {
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: transparent;
+    }
+
+
+    & > div {
+
+        &:first-of-type {
+            width: 30%;
+            align-self: flex-start;
+
+            h2 {
+                display: none;
+                margin-bottom: u.rem(25);
+
+                @include u.breakpoints(xlarge) {
+                    display: block;
+                    font-size: var(--fs-md);
+                }
+            }
+
+            p {
+                display: none;
+                margin-bottom: u.rem(5);
+
+                @include u.breakpoints(xlarge) {
+                    display: block;
+                    font-size: var(--fs-sm);
+                }
+            }
+        }
+
+        &:last-of-type {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: u.rem(740);
+
+            @include u.breakpoints(xlarge) {
+                width: 60%;
+                background-color: #2a2c2c;
+                padding: u.rem(25);
+                border-radius: u.rem(10);
+            }
+
+            p {
+                @include u.breakpoints(xlarge) {
+                    display: none;
+                }
+            }
+
+            h2 {
+                margin: u.rem(15) 0;
+
+                @include u.breakpoints(xlarge) {
+                    display: none;
+                }
+            }
+
+            form {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: u.rem(10);
+
+                @include u.breakpoints(xlarge) {
+                    width: 100%;
+                }
+
+                input {
+                    width: 100%;
+                    height: u.rem(50);
+                    border-radius: u.rem(10);
+                    padding-left: u.rem(10);
+                    background-color: transparent;
+                    color: var(--text);
+                    border: var(--secondary) u.rem(1) solid;
+
+                    @include u.breakpoints(xlarge) {
+                        font-size: var(--fs-sm);
+                    }
+
+                    &:focus {
+                        outline: var(--secondary) u.rem(2) solid;
+                    }
+                }
+
+                textarea {
+                    width: 100%;
+                    padding: u.rem(10);
+                    border-radius: u.rem(10);
+                    background-color: transparent;
+                    color: var(--text);
+                    border: var(--secondary) u.rem(1) solid;
+
+                    @include u.breakpoints(xlarge) {
+                        font-size: var(--fs-sm);
+                    }
+
+                    &:focus {
+                        outline: var(--secondary) u.rem(2) solid;
+                    }
+                }
+
+                button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: u.rem(15) u.rem(40);
+                    margin: u.rem(25) 0;
+                    letter-spacing: u.rem(2);
+                    font-size: var(--fs-base);
+                    font-weight: 500;
+                    background-color: transparent;
+                    border: var(--secondary) u.rem(1) solid;
+                    border-radius: u.rem(10);
+                    color: var(--secondary);
+                    transition: all .1s linear;
+                    cursor: pointer;
+
+                    @include u.breakpoints(xlarge) {
+                        width: u.rem(130);
+                        height: u.rem(35);
+                        font-size: var(--fs-sm);
+                    }
+
+                    &:hover {
+                        background-color: var(--secondary);
+                        color: var(--text);
+                    }
+                }
+            }
+        }
+        
+    }
+}

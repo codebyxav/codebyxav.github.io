@@ -1,0 +1,77 @@
+@use '../util/' as u;
+
+:root {
+  --bg-dark: hsl(283 40% 2%);
+  --bg: hsl(286 25% 5%);
+  --bg-light: hsl(286 14% 9%);
+  --text: hsl(285 100% 96%);
+  --text-muted: hsl(286 12% 71%);
+  --highlight: hsl(286 8% 40%);
+  --border: hsl(286 10% 29%);
+  --border-muted: hsl(286 15% 19%);
+  --primary: hsl(286 46% 74%);
+  --secondary: hsl(105 33% 63%);
+  --danger: hsl(9 26% 64%);
+  --warning: hsl(52 19% 57%);
+  --success: hsl(146 17% 59%);
+  --info: hsl(217 28% 65%);
+}
+
+
+.light-mode {
+  --bg-dark: hsl(285 19% 90%);
+  --bg: hsl(285 43% 96%);
+  --bg-light: hsl(285 100% 100%);
+  --text: hsl(286 46% 5%);
+  --text-muted: hsl(286 10% 29%);
+  --highlight: hsl(285 100% 100%);
+  --border: hsl(286 7% 52%);
+  --border-muted: hsl(286 10% 63%);
+  --primary: hsl(286 34% 31%);
+  --secondary: hsl(103 54% 21%);
+  --danger: hsl(9 21% 41%);
+  --warning: hsl(52 23% 34%);
+  --success: hsl(147 19% 36%);
+  --info: hsl(217 22% 41%);
+}
+
+
+
+
+
+
+/* For browsers that support clamp  */
+@supports (font-size: clamp(1rem, 1vi, 1rem)) {
+  :root {
+		--fs-sm: clamp(0.8rem, 0.09vi + 0.77rem, 0.84rem);
+		--fs-base: clamp(1rem, 0.24vi + 0.91rem, 1.13rem);
+		--fs-md: clamp(1.25rem, 0.48vi + 1.08rem, 1.5rem);
+		--fs-lg: clamp(1.56rem, 0.85vi + 1.26rem, 2rem);
+		--fs-xl: clamp(1.95rem, 1.38vi + 1.46rem, 2.66rem);
+		--fs-xxl: clamp(2.44rem, 2.16vi + 1.67rem, 3.55rem);
+		--fs-xxxl: clamp(3.05rem, 3.27vi + 1.88rem, 4.73rem);
+  }
+}
+/* For browsers that don't support clamp */
+@supports not (font-size: clamp(1rem, 1vi, 1rem)) {
+  :root {
+		--fs-sm: 0.8rem;
+		--fs-base: 1rem;
+		--fs-md: 1.25rem;
+		--fs-lg: 1.56rem;
+		--fs-xl: 1.95rem;
+		--fs-xxl: 2.44rem;
+		--fs-xxxl: 3.05rem;
+  }
+  @media screen and (min-width: 1400px) {
+    :root {
+			--fs-sm: 0.84rem;
+			--fs-base: 1.13rem;
+			--fs-md: 1.5rem;
+			--fs-lg: 2rem;
+			--fs-xl: 2.66rem;
+			--fs-xxl: 3.55rem;
+			--fs-xxxl: 4.73rem;
+    }
+  }
+}
